@@ -55,10 +55,10 @@ function App() {
           <div className='nav_bar3'></div>
         </div>
         <div className='main_cont'>
-          <New ticket={ticket} title={'new'}/>
-          <New ticket={ticket} title={'new'}/>
-          <New ticket={ticket} title={'new'}/>
-          <New ticket={ticket} title={'new'}/>
+          <New ticket={ticket} title={'New'} id={1} color={'green'}/>
+          <New ticket={ticket} title={'In Progress'} id={2} color={'orange'}/>
+          <New ticket={ticket} title={'Testing'} id={3} color={'yellow'}/>
+          <New ticket={ticket} title={'Done'} id={4} color={'red'}/>
         </div>
       </div>
       <CreateModal  setTicket={setTicket} ticket={ticket}/>

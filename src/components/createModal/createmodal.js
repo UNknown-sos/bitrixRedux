@@ -3,13 +3,15 @@ import React, {useState} from 'react'
 import Select from 'react-select'
 import CreateBtn from '../buttons/createbtn';
 import { useSelector } from 'react-redux';
-
+import { useDispatch } from 'react-redux';
+import { create } from '../../store/index'; 
 import {userData,Status} from "../userData/userdata";
 
-export default function CreateModal({display,show,setTicket,ticket}){
+export default function CreateModal({display,show,setTicket,ticket,item}){
     const isShow = useSelector((state) => state.index.show)
-    const isDataState = useSelector((state) => state.index.datas)
-
+    
+    const dispatch = useDispatch()
+    
     let arruserData = []
     userData.map(item => {
         arruserData.push({value:item.id,label:item.username})
@@ -18,21 +20,16 @@ export default function CreateModal({display,show,setTicket,ticket}){
     const [base,setBase] = useState({
         name:'',
         description:'',
-        status: '',
-        progress: ''
+        status: 0,
+        progress: 0,
     })
 
     // push SetBase
 
     function handlerCreate(){
-        console.log(base);
-        // setTicket((state) => {
-        //     return[
-        //         ...state,
-        //             base
-        //     ]
-        // })
+        dispatch(create({item: base}))    
     }
+    
 
     return  (
         <div className={'createModal'} style={{display:( isShow ? 'block' : 'none')}}>
@@ -84,7 +81,7 @@ export default function CreateModal({display,show,setTicket,ticket}){
                     setBase((state)=>{
                         return{
                             ...state,
-                            status:i.label
+                            status:i.value
                         }
                     })
                 }}
