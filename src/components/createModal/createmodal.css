@@ -1,6 +1,6 @@
 .createModal{
-    width: 320px;
-    height: 350px;
+    width: 550px;
+    height: 320px;
     padding: 2px;
     /*border: 1px solid black;*/
     background-color: white;
@@ -8,15 +8,25 @@
     top: 27%;
     left: 37%;
     box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    border-radius: 6px;
+    border: 1px solid grey;
     display: none;
-
 }
+
+body{
+    font-family: monospace;
+}
+
+.modal_title{
+    font-size: 20px;
+}
+
 .cancel_icon{
     width: 35px;
     height: 35px;
     position: absolute;
     top: 5px;
-    right: 5px;
+    right: 2px;
     /*border: 1px solid black;*/
     background-image: url("../../../public/icons8-cancel-50.png");
     background-position: center;
@@ -33,46 +43,97 @@
 
 .inputs_Cont{
     width: 100%;
-    height: 80px;
+    height: 70px;
+    /* border: 1px solid black; */
 }
 
-.name_input_box{
-    width: 100%;
+.inputName_cont{
+    width: 90%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.inputName_title{
+    width: 50px;
     height: 30px;
-    padding: 10px;
     display: flex;
     justify-content: center;
-    align-items:center;
+    align-items: center;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
     /* border: 1px solid red; */
 }
 
-.name_input_box > input{
+.inputName{
+    width: 60%;
+    height: 50%;
+    display: flex;
+    align-items: center;
+    /* border: 1px solid red; */
+}
+
+.inputName > input{
     width: 100%;
-    height: 30px;
-    border-radius: 10px;
+    height: 100%;
     outline: none;
-    padding-left: 10px;
-    border: 1px solid black;
+}
+
+.desc_title{
+    width: 80px;
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    /* border: 2px solid red; */
 }
 
 .desc_input_box{
     width: 100%;
-    height: 30px;
-    padding: 10px;
+    height: 80px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
     /* border: 1px solid black; */
 }
 
-.desc_input_box > input{
-    width: 100%;
-    height: 30px;
+.desc_input_box > textarea{
     padding-left: 10px;
     border-radius: 10px;
-    border: 1px solid black;    
+    /* border: 1px solid black;     */
+}
+
+.userIdSelect_box{
+    width: 100%;
+    height: 80px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    border-bottom: 1px solid gray;
+    /* border: 1px solid black; */
+}
+
+.select_title{
+    width: 90px;
+    height: 30px;
+    /* border: 2px solid blue; */
+}
+
+.progress_box{
+    width: 100%;
+    height: 80px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
 }
 
 .create_btn{
-    width: 300px;
-    height: 150px;
+    width: 150px;
+    height: 50px;
+    position: absolute;
+    top: 255px;
+    left: 387px;
     display: flex;
     justify-content: center;
     align-items: center;

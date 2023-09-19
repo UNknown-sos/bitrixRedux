@@ -32,7 +32,9 @@ export default function CreateModal({display,show,setTicket,ticket,item}){
     
 
     return  (
+        <div>
         <div className={'createModal'} style={{display:( isShow ? 'block' : 'none')}}>
+            <span className='modal_title'>Edit Activity</span>
             <div className={'cancel_icon'} onClick={()=>{
                 if(display ==='none'){
                     show('block')
@@ -42,53 +44,74 @@ export default function CreateModal({display,show,setTicket,ticket,item}){
             }}>
             </div>
             <div className='inputs_Cont'>
-            <div className='name_input_box'>
-                <input type={'text'} placeholder={'name'}  onBlur={(e)=>{
-                setBase((state) => {
-                    return {
-                        ...state,
-                        name:e.target.value
-                    }
+                <div className='inputName_cont'>
+                    <div className='inputName_title'>
+                        <p>Name:</p>
+                    </div>
+                    <div className='inputName'>
+                            <input type={'text'}   onBlur={(e)=>{
+                                setBase((state) => {
+                                return {
+                                    ...state,
+                                    name:e.target.value
+                                }
                     
-                })
-                }}/>
+                            })
+                        }}/>
+                    </div>
+                </div>
             </div>
             <div className='desc_input_box'>
-                <input type={'text'} placeholder={'desc'} onBlur={(e)=>{
-                    setBase((state) =>{
-                        return{
-                            ...state,
-                            description:e.target.value
-                        }
-                    })
-                }}/>
+                <div className='desc_title'>
+                        <p>Surname:</p>
+                </div>
+                <div className='description_area'>
+                    <textarea type={'text-area'} placeholder={'text area'} onBlur={(e)=>{
+                        setBase((state) =>{
+                            return{
+                                ...state,
+                                description:e.target.value
+                            }
+                        })
+                    }}textarea/>
+                </div>
             </div>
+            <div className='userIdSelect_box'>
+                <div className='select_title'>
+                    <p>User Id</p>
+                </div>
+                    <Select
+                    options={arruserData}
+                    onChange={(i)=>{
+                        setBase((state)=>{
+                            return{
+                                ...state,
+                                progress:i.label
+                            }   
+                            })
+                        }}
+                    />
             </div>
-            <Select
-                options={arruserData}
-                onChange={(i)=>{
-                    setBase((state)=>{
-                        return{
-                            ...state,
-                            progress:i.label
-                        }
-                    })
-                }}
-            />
-                <Select
-                options={Status}
-                onChange={(i)=>{
-                    setBase((state)=>{
-                        return{
-                            ...state,
-                            status:i.value
-                        }
-                    })
-                }}
+                <div className='progress_box'>
+                    <div className='select_title'>
+                        <p>Progress</p>
+                    </div>
+                    <Select
+                        options={Status}
+                        onChange={(i)=>{
+                        setBase((state)=>{
+                            return{
+                             ...state,
+                                status:i.value
+                            }
+                        })
+                    }}
                 />
+                </div>
             <div className='create_btn'>
                 <CreateBtn handlerCreate={handlerCreate} base={base} setTicket={setTicket}/>
             </div>
+        </div>
         </div>
     )
 }
