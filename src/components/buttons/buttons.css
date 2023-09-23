@@ -1,0 +1,8 @@
+.createBtn{
+    width: 100px;
+    height: 35px;
+    border: none;
+    border-radius: 5px;
+    background-color: lightgreen;
+    color: black;
+}
