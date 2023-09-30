@@ -61,7 +61,7 @@ function App() {
           <New ticket={ticket} title={'Done'} id={4} color={'red'}/>
         </div>
       </div>
-      <CreateModal  setTicket={setTicket} ticket={ticket}/>
+      <CreateModal handlerModal={handlerCreate} setTicket={setTicket} ticket={ticket}/>
     </div>
   );
 }

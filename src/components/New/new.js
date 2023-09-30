@@ -10,7 +10,7 @@ export default function New({ticket,name,description,status,progress,create,id,t
                 <p>{title}</p>
             </div>
             <div className='price_box'>
-                <p>$46</p>
+                <p>0$</p>
             </div>
             <div className='add_box'>
                 <p>+ Quick Deal</p>
@@ -19,14 +19,27 @@ export default function New({ticket,name,description,status,progress,create,id,t
                {dataState.map((item)=>{
                 return item.status === id && ( 
                 <div className='card'>
-                    {/* <div className='card_status'>
-                        <p>{item.status}</p>
-                    </div> */}
                     <div className='card_name'>
-                        <p>{item.name}</p>
+                        <p>Deal #{item.name}</p>
                     </div>
                     <div className='card_desc'>
-                        <p>{item.description}</p>
+                        <p>€{item.description}</p>
+                    </div>
+                    <div className='add_data'>
+                        <p>
+                            3 minute ago
+                        </p>
+                    </div>
+                    <div className='company_name'>
+                        <p>{item.progress}</p>
+                    </div>
+                    <div className='reactions_bar'>
+                        <div className='comment'>
+                            <p>C</p>
+                        </div>
+                        <div className='like'>
+                            <p>L</p>
+                        </div>
                     </div>
                 </div>
                 )

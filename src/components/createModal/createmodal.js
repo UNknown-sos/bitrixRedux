@@ -7,7 +7,7 @@ import { useDispatch } from 'react-redux';
 import { create } from '../../store/index'; 
 import {userData,Status} from "../userData/userdata";
 
-export default function CreateModal({display,show,setTicket,ticket,item}){
+export default function CreateModal({display,show,setTicket,ticket,item,handlerModal}){
     const isShow = useSelector((state) => state.index.show)
     
     const dispatch = useDispatch()
@@ -35,18 +35,12 @@ export default function CreateModal({display,show,setTicket,ticket,item}){
         <div>
         <div className={'createModal'} style={{display:( isShow ? 'block' : 'none')}}>
             <span className='modal_title'>Edit Activity</span>
-            <div className={'cancel_icon'} onClick={()=>{
-                if(display ==='none'){
-                    show('block')
-                } else if(display === 'block'){
-                    show('none')
-                }
-            }}>
+            <div className={'cancel_icon'} onClick={handlerModal}>
             </div>
             <div className='inputs_Cont'>
                 <div className='inputName_cont'>
                     <div className='inputName_title'>
-                        <p>Name:</p>
+                        <p>Deal Num:</p>
                     </div>
                     <div className='inputName'>
                             <input type={'text'}   onBlur={(e)=>{
@@ -63,7 +57,7 @@ export default function CreateModal({display,show,setTicket,ticket,item}){
             </div>
             <div className='desc_input_box'>
                 <div className='desc_title'>
-                        <p>Surname:</p>
+                        <p>Deal Price:</p>
                 </div>
                 <div className='description_area'>
                     <textarea type={'text-area'} placeholder={'text area'} onBlur={(e)=>{
@@ -78,7 +72,7 @@ export default function CreateModal({display,show,setTicket,ticket,item}){
             </div>
             <div className='userIdSelect_box'>
                 <div className='select_title'>
-                    <p>User Id</p>
+                    <p>Company:</p>
                 </div>
                     <Select
                     options={arruserData}
@@ -94,7 +88,7 @@ export default function CreateModal({display,show,setTicket,ticket,item}){
             </div>
                 <div className='progress_box'>
                     <div className='select_title'>
-                        <p>Progress</p>
+                        <p>Progress:</p>
                     </div>
                     <Select
                         options={Status}

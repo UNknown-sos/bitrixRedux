@@ -1,47 +1,47 @@
 export const userData = [
     {
         id: 1,
-        username: 'Jamshut',
+        username: 'ASUS',
         password: 'asasas111',
     },
     {
         id: 2,
-        username: 'Maxmud',
+        username: 'Xiaomi',
         password: 'asdsfds234',
     },
     {
         id: 3,
-        username: 'Julia',
+        username: 'Samsung',
         password: 'qwerty3123',
     },
     {
         id: 4,
-        username: 'Isaak',
+        username: 'Steam',
         password: 'gjsdf554',
     },
     {
         id: 5,
-        username: 'Nyuton',
+        username: 'Space X',
         password: '127ulullu',
     },
     {
         id: 6,
-        username: 'Baxmil',
+        username: 'Meta',
         password: 'qwertoo11',
     },
     {
         id: 7,
-        username: 'Deril',
+        username: 'Microsoft',
         password: 'ezas11e',
     },
     {
         id: 8,
-        username: 'Luiza',
+        username: 'Google Corp.',
         password: 'partizg13',
     },
     {
         id: 9,
-        username: 'Miqo',
+        username: 'Apple Inc.',
         password: 'qqwe13123',
     },
 ]
