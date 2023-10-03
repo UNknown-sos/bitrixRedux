@@ -1,7 +1,7 @@
 import { useSelector } from 'react-redux'
 import style from './main.css'
 
-export default function New({ticket,name,description,status,progress,create,id,title,color}) {
+export default function New({ticket,name,description,status,progress,create,id,title,color,commentMenu}) {
     const dataState = useSelector((state) => state.index.data)
 
     return (
@@ -34,11 +34,11 @@ export default function New({ticket,name,description,status,progress,create,id,t
                         <p>{item.progress}</p>
                     </div>
                     <div className='reactions_bar'>
-                        <div className='comment'>
+                        <div className='comment' onClick={commentMenu}>
                             <p>C</p>
                         </div>
                         <div className='like'>
-                            <p>L</p>
+                            <p>D</p>
                         </div>
                     </div>
                 </div>

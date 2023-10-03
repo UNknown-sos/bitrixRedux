@@ -9,6 +9,8 @@ import CreateModal from "./components/createModal/createmodal";
 import { useDispatch , useSelector} from 'react-redux';
 import { isShow } from './store/index';
 import { setData } from './store/index';
+import { setComments } from './store/index';
+import CommentModal from './components/commentModal/commentModal';
 
 function App() {
  ////const [ishow,setiShow] = useState('none')
@@ -16,6 +18,7 @@ function App() {
 
   const dispatch = useDispatch()
   const isShowState = useSelector((state) => state.index.show)
+  const isCommentState = useSelector((state) => state.index.comments)
 
   const handlerCreate = () =>{
    console.log(isShowState,'isShowStateisShowState');
@@ -26,6 +29,13 @@ function App() {
     }
   }
 
+    const handlerComment = () => {
+        if(isCommentState){
+          dispatch(setComments({comments:false}))
+        }else{
+          dispatch(setComments({comments:true}))
+        }
+    }
 
   return (
 
@@ -55,13 +65,14 @@ function App() {
           <div className='nav_bar3'></div>
         </div>
         <div className='main_cont'>
-          <New ticket={ticket} title={'New'} id={1} color={'green'}/>
-          <New ticket={ticket} title={'In Progress'} id={2} color={'orange'}/>
-          <New ticket={ticket} title={'Testing'} id={3} color={'yellow'}/>
-          <New ticket={ticket} title={'Done'} id={4} color={'red'}/>
+          <New ticket={ticket} title={'New'} id={1} color={'green'} commentMenu={handlerComment}/>
+          <New ticket={ticket} title={'In Progress'} id={2} color={'orange'}commentMenu={handlerComment}/>
+          <New ticket={ticket} title={'Testing'} id={3} color={'yellow'}commentMenu={handlerComment}/>
+          <New ticket={ticket} title={'Done'} id={4} color={'red'}commentMenu={handlerComment}/>
         </div>
       </div>
-      <CreateModal handlerModal={handlerCreate} setTicket={setTicket} ticket={ticket}/>
+      <CreateModal handlerModal={handlerCreate} setTicket={setTicket} ticket={ticket} commentMenu={handlerComment}/>
+      <CommentModal commentMenu={handlerComment} style={{comments}}/>
     </div>
   );
 }

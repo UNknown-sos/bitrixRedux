@@ -2,8 +2,11 @@ import { createSlice } from '@reduxjs/toolkit'
 
 const initialState = {
   show:false,
-  data: []
+  data: [],
+  comments: '',
+  ticket_id: 0
 }
+
 
 export const indexSlice = createSlice({
   name: 'index',
@@ -19,13 +22,18 @@ export const indexSlice = createSlice({
     create : (state,action) => {
       state.data = [
         ...state.data,
-          action.payload.item
+          action.payload.item,
       ] 
+    },
+    setComments : (state,action) => {
+      state.data = [
+        ...state.data,
+        action.payload.comments,
+      ]
     }
   },
-
 })
 
-export const { isShow,setData ,create} = indexSlice.actions
+export const { isShow,setData ,create,setComments} = indexSlice.actions
 
 export default indexSlice.reducer
