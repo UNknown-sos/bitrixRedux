@@ -3,8 +3,9 @@ import { createSlice } from '@reduxjs/toolkit'
 const initialState = {
   show:false,
   data: [],
-  comments: '',
-  ticket_id: 0
+  comments: false,
+  ticket_id: 0,
+  write:[]
 }
 
 
@@ -26,14 +27,17 @@ export const indexSlice = createSlice({
       ] 
     },
     setComments : (state,action) => {
-      state.data = [
-        ...state.data,
-        action.payload.comments,
-      ]
+      state.comments = action.payload.comments
+    },
+    writeComment : (state,action) => {
+        state.write = [
+          ...state.write,
+            action.payload.write
+        ]
     }
   },
 })
 
-export const { isShow,setData ,create,setComments} = indexSlice.actions
+export const { isShow,setData ,create,setComments,writeComment} = indexSlice.actions
 
 export default indexSlice.reducer

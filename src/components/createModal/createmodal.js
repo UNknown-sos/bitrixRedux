@@ -29,7 +29,7 @@ export default function CreateModal({display,show,setTicket,ticket,item,handlerM
     function handlerCreate(){
         dispatch(create({item: base}))    
     }
-    
+
 
     return  (
         <div>

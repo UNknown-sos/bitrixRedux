@@ -21,7 +21,7 @@ function App() {
   const isCommentState = useSelector((state) => state.index.comments)
 
   const handlerCreate = () =>{
-   console.log(isShowState,'isShowStateisShowState');
+
     if(isShowState){
        dispatch(isShow({show:false}))
     } else{
@@ -72,7 +72,7 @@ function App() {
         </div>
       </div>
       <CreateModal handlerModal={handlerCreate} setTicket={setTicket} ticket={ticket} commentMenu={handlerComment}/>
-      <CommentModal commentMenu={handlerComment} style={{comments}}/>
+      <CommentModal commentMenu={handlerComment}/>
     </div>
   );
 }
