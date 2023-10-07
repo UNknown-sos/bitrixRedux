@@ -15,7 +15,6 @@ import CommentModal from './components/commentModal/commentModal';
 function App() {
  ////const [ishow,setiShow] = useState('none')
   const [ticket,setTicket] = useState([])
-
   const dispatch = useDispatch()
   const isShowState = useSelector((state) => state.index.show)
   const isCommentState = useSelector((state) => state.index.comments)
@@ -72,7 +71,7 @@ function App() {
         </div>
       </div>
       <CreateModal handlerModal={handlerCreate} setTicket={setTicket} ticket={ticket} commentMenu={handlerComment}/>
-      <CommentModal commentMenu={handlerComment}/>
+      <CommentModal commentMenu={handlerComment} />
     </div>
   );
 }

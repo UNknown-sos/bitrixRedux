@@ -34,6 +34,9 @@ export const indexSlice = createSlice({
           ...state.write,
             action.payload.write
         ]
+    },
+    ticketId : (state,action) => {
+      state.ticket_id = action.payload.ticket_id
     }
   },
 })

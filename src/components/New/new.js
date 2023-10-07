@@ -1,5 +1,6 @@
 import { useSelector } from 'react-redux'
 import style from './main.css'
+import {ticket_id} from '../../store/index'
 
 export default function New({ticket,name,description,status,progress,create,id,title,color,commentMenu}) {
     const dataState = useSelector((state) => state.index.data)
@@ -34,7 +35,10 @@ export default function New({ticket,name,description,status,progress,create,id,t
                         <p>{item.progress}</p>
                     </div>
                     <div className='reactions_bar'>
-                        <div className='comment' onClick={commentMenu}>
+                        <div className='comment' onClick={() =>{
+                            dispatch(handlerComment({ticket_id}))
+                            commentMenu()
+                        }}>
                             <p>C</p>
                         </div>
                         <div className='like'>

@@ -9,7 +9,7 @@ import {userData,Status} from "../userData/userdata";
 
 export default function CreateModal({display,show,setTicket,ticket,item,handlerModal}){
     const isShow = useSelector((state) => state.index.show)
-    
+    const dataState = useSelector((state) => state.index.data)
     const dispatch = useDispatch()
     
     let arruserData = []
@@ -22,6 +22,7 @@ export default function CreateModal({display,show,setTicket,ticket,item,handlerM
         description:'',
         status: 0,
         progress: 0,
+        id: 1
     })
 
     // push SetBase
@@ -49,7 +50,6 @@ export default function CreateModal({display,show,setTicket,ticket,item,handlerM
                                     ...state,
                                     name:e.target.value
                                 }
-                    
                             })
                         }}/>
                     </div>
@@ -77,9 +77,11 @@ export default function CreateModal({display,show,setTicket,ticket,item,handlerM
                     <Select
                     options={arruserData}
                     onChange={(i)=>{
+                
                         setBase((state)=>{
                             return{
                                 ...state,
+                                id:dataState[dataState.length-1] ? dataState[dataState.length-1].id+1: 1,
                                 progress:i.label
                             }   
                             })
