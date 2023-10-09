@@ -40,6 +40,20 @@ function App() {
 
     <div className="App">
       <div className='bg'>
+        <div className='upperBar'>
+          <div className='dropMenu--logo'>
+            <div className='dropMenu'>
+              <div className='decorLine'></div>
+              <div className='decorLine'></div>
+              <div className='decorLine'></div>
+            </div>
+            <div className='logo'></div>
+          </div>
+          <div className='search'></div>
+          <div className='date'></div>
+          <div className='profile--myPlan'></div>
+          <div className='invite'></div>
+        </div>
         <Header/>
         <div className='navigation_bar_box'>
           <div className='nav_title_box'>

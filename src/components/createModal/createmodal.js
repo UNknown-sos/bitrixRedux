@@ -31,7 +31,7 @@ export default function CreateModal({display,show,setTicket,ticket,item,handlerM
         dispatch(create({item: base}))    
     }
 
-
+    // console.log(base)
     return  (
         <div>
         <div className={'createModal'} style={{display:( isShow ? 'block' : 'none')}}>
@@ -77,7 +77,6 @@ export default function CreateModal({display,show,setTicket,ticket,item,handlerM
                     <Select
                     options={arruserData}
                     onChange={(i)=>{
-                
                         setBase((state)=>{
                             return{
                                 ...state,

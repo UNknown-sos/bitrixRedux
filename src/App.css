@@ -2,6 +2,8 @@
   margin: 0;
   box-sizing: border-box;
 }
+
+
 .bg{
   width: 100%;
   height: 100vh;
@@ -10,8 +12,54 @@
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-  padding-right: 40px;
+  /* padding-right: 40px; */
+  border: 2px solid green;
 }
+
+.upperBar{
+  width: 100%;
+  height: 80px;
+  /* background-image: url(../public/aa.jpg);
+  background-position: center;
+  background-size: cover; */
+}
+
+/* Container for Drop Down Menu and Logo */
+
+.dropMenu--logo{
+  width: 15%;
+  height: 100%;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  /* background-color: brown; */
+}
+
+.dropMenu{
+  width: 40px;
+  height: 45px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  /* background-color: white; */
+}
+
+.logo{
+  width: 70%;
+  height: 45px;
+  background-image: url('../public/bitrixLogo.jpg');
+  background-position: center;
+  background-size:cover;
+  background-color: yellow;
+}
+
+.decorLine{
+  width: 90%;
+  height: 4px;
+  background-color: black;
+}
+
 .navigation_bar_box{
   width: 95%;
   height: 60px;

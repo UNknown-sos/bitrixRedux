@@ -41,6 +41,6 @@ export const indexSlice = createSlice({
   },
 })
 
-export const { isShow,setData ,create,setComments,writeComment} = indexSlice.actions
+export const { isShow,setData ,create,setComments,writeComment,ticketId,ticket_id} = indexSlice.actions
 
 export default indexSlice.reducer
