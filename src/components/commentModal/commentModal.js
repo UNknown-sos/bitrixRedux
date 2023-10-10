@@ -5,18 +5,15 @@ import {writeComment} from '../../store/index'
 import { useState } from 'react'
 import { userData } from '../userData/userdata'
 import {ticketId} from '../../store/index'
-import {arruserData} from '../createModal/createmodal'
 
 import './commentModal.css'
 
 function CommentModal({setComments,comments,commentMenu,write,item,base}){
+    const dispatch = useDispatch() 
     const isCommentState = useSelector((state) => state.index.comments)
     const commentsData = useSelector((state) => state.index.write)
-    const [create,setCreate] = useState('')
+    const [create,setCreate] = useState()
     const [user,setUser] = useState('')
-
-    const dispatch = useDispatch()  
-    console.log(arruserData);
 
     return(
         <>
@@ -33,6 +30,11 @@ function CommentModal({setComments,comments,commentMenu,write,item,base}){
                     <div className='comments_count'>
                        {
                           commentsData.map((item) => {
+                            userData.filter((userItem) => {
+                                if(userItem.id === item.userId){
+
+                                }
+                            })
                                 return (<>
                                 <div className='createdBox'>
                                     <p>Username - </p>

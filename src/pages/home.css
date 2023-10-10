@@ -1,0 +1,198 @@
+*{
+    margin: 0;
+    box-sizing: border-box;
+  }
+  
+  
+  .bg{
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    background-image: url(../public/aa.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    /* padding-right: 40px; */
+    border: 2px solid green;
+  }
+  
+  .upperBar{
+    width: 100%;
+    height: 80px;
+    /* background-image: url(../public/aa.jpg);
+    background-position: center;
+    background-size: cover; */
+  }
+  
+  /* Container for Drop Down Menu and Logo */
+  
+  .dropMenu--logo{
+    width: 15%;
+    height: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    /* background-color: brown; */
+  }
+  
+  .dropMenu{
+    width: 40px;
+    height: 45px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    /* background-color: white; */
+  }
+  
+  .logo{
+    width: 70%;
+    height: 45px;
+    background-image: url('../public/bitrixLogo.jpg');
+    background-position: center;
+    background-size:cover;
+    background-color: yellow;
+  }
+  
+  .decorLine{
+    width: 90%;
+    height: 4px;
+    background-color: black;
+  }
+  
+  .navigation_bar_box{
+    width: 95%;
+    height: 60px;
+    /* border: 1px solid black; */
+    border-bottom: 1px solid white;
+    padding-bottom: 10px;
+    margin-left: 45px;
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-between;
+  }
+  .nav_title_box{
+    width: 10%;
+    height: 100%;
+    /* border: 1px solid black; */
+    color: white;
+    font-size: 29px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .createBtn_box{
+    width: 10%;
+    height: 100%;
+    /* border: 1px solid black; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .general_box{
+    width: 10%;
+    height: 85%;
+    border: 1px solid white;
+    border-radius: 5px;
+    background-color: lightgray;
+    opacity: 10;
+    color: white;
+    font-size: 29px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 5px;
+  }
+  .search_box{
+    width: 40%;
+    height: 100%;
+    border-radius: 5px;
+    border: 1px solid white;
+    background-color: lightgray;
+    display: flex;
+  }
+  .Deals_box{
+    width: 200px;
+    height: 90%;
+    /* border: 1px solid black; */
+    background-color: lightskyblue;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 18px;
+    margin-top: 3.5px;
+  }
+  .settings_box{
+    width: 7%;
+    height: 100%;
+    /* border: 1px solid black; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .settings{
+    height: 50px;
+    width: 50px;
+    border: 1px solid black;
+    background-color: lightgray;
+    background-image: url('../public/icon.svg');
+    background-position: center;
+    background-size: 30px 30px;
+    background-repeat: no-repeat;
+    border-radius: 5px;
+  }
+  .nav_bar2_box{
+    width: 95%;
+    height: 40px;
+    /* border: 1px solid black; */
+    margin-top: 10px;
+    margin-left: 45px;
+    display: flex;
+    gap: 30px;
+  
+  }
+  .nav_bar2{
+    width: 400px;
+    height: 40px;
+    /* border: 1px solid black; */
+    opacity: 0.6;
+    background-color: lightgray;
+    border-radius: 15px;
+  }
+  .nav_bar3{
+    width: 400px;
+    height: 40px;
+    /* border: 1px solid black; */
+    opacity: 0.6;
+    background-color: lightgray;
+    border-radius: 15px;
+  }
+  .search{
+    width: 100%;
+    height: 95%;
+    background: none;
+    border: 1px solid white;
+    margin-top: 3px;
+    opacity: 0.7;
+  }
+  .main_cont{
+    width: 95%;
+    height: 800px;
+    /* border: 1px solid black; */
+    margin-top: 10px;
+    display: flex;
+    gap: 10px;
+    margin-left: 45px;
+  }
+  
+  .commentBox{
+    width: 500px;
+    height: 280px;
+    display: flex;
+    position: absolute;
+    top: 300px;
+    right: 120px;
+    background-color: skyblue;
+  }

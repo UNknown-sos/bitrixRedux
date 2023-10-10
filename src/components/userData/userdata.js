@@ -2,17 +2,17 @@ export const userData = [
     {
         id: 1,
         username: 'ASUS',
-        password: 'asasas111',
+        password: '123456',
     },
     {
         id: 2,
         username: 'Xiaomi',
-        password: 'asdsfds234',
+        password: 'redmi9a',
     },
     {
         id: 3,
         username: 'Samsung',
-        password: 'qwerty3123',
+        password: 'qwerty123',
     },
     {
         id: 4,
