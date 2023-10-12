@@ -45,15 +45,6 @@
     /* background-color: white; */
   }
   
-  .logo{
-    width: 70%;
-    height: 45px;
-    background-image: url('../public/bitrixLogo.jpg');
-    background-position: center;
-    background-size:cover;
-    background-color: yellow;
-  }
-  
   .decorLine{
     width: 90%;
     height: 4px;
