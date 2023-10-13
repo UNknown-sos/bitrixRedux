@@ -23,7 +23,7 @@ function App() {
 function handlerCheck(){
   userData.filter((item)=>{
     if(user.username === item.username && user.password === item.password){
-        console.log("uraaa!");
+      navigate("/home");
     }else{
       console.log('yaxq araaa@!');
     }
