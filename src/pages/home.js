@@ -1,4 +1,4 @@
-import '../App.css';
+import '../App.css'
 import Select from 'react-select';
 import Header from '../components/header';
 import New from '../components/New/new';
@@ -12,7 +12,6 @@ import { setComments } from '../store/index';
 import CommentModal from '../components/commentModal/commentModal';
 
 function Home() {
- ////const [ishow,setiShow] = useState('none')
   const [ticket,setTicket] = useState([])
   const dispatch = useDispatch()
   const isShowState = useSelector((state) => state.index.show)
@@ -38,24 +37,12 @@ function Home() {
   return (
     <div>
       <div className='bg'>
-        <div className='upperBar'>
-          <div className='dropMenu--logo'>
-            <div className='dropMenu'>
-              <div className='decorLine'></div>
-              <div className='decorLine'></div>
-              <div className='decorLine'></div>
-            </div>
-            {/* <div className='logo'></div> */}
-          </div>
-          <div className='search'></div>
-          <div className='date'></div>
-          <div className='profile--myPlan'></div>
-          <div className='invite'></div>
-        </div>
-        <Header/>
         <div className='navigation_bar_box'>
           <div className='nav_title_box'>
             <p>Deals</p>
+          </div>
+          <div className='search--cont'>
+              
           </div>
           <div className='createBtn_box'>
             <CreateBtn handlerCreate={handlerCreate}/>

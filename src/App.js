@@ -25,7 +25,7 @@ function handlerCheck(){
     if(user.username === item.username && user.password === item.password){
       navigate("/home");
     }else{
-      console.log('yaxq araaa@!');
+      console.log("sd");
     }
   })
 }
@@ -34,26 +34,15 @@ function handlerCheck(){
   return (
     <div className="App">
         <div className='mainContainer'>
-            <header>
-              <span>Login</span>
-            </header>
-           <div className='input--container'>
-            <div className='usernameInput--box'>
-                  <input type='text' placeholder='Username' onBlur={(e)=>{
-                      user.username = e.target.value
-                      console.log(user.username);
-                  }}/>
-              </div>
-              <div className='passwordInput--box'>
-                  <input type='password' placeholder='Password' onBlur={(e)=>{
-                    user.password = e.target.value
-                    console.log(user.password);
-                  }}/>
-              </div>
-           </div>
-           <div className='login_btn' onClick={()=>handlerCheck()}>
-                <span>Log In</span>
-           </div>
+            <form className='login'>
+              <input type='text' placeholder='Username' onBlur={(e)=>{
+                user.username = e.target.value
+              }}/>
+              <input type='password'placeholder='Password' onBlur={(e)=>{
+                user.password = e.target.value
+              }}/>
+              <button onClick={()=>handlerCheck()}>Login</button>
+            </form>
         </div>
     </div>
   );
