@@ -6,10 +6,12 @@ import { useSelector } from 'react-redux';
 import { useDispatch } from 'react-redux';
 import { create } from '../../store/index'; 
 import {userData,Status} from "../userData/userdata";
+import { useEffect } from 'react';
 
 export default function CreateModal({display,show,setTicket,ticket,item,handlerModal}){
     const isShow = useSelector((state) => state.index.show)
     const dataState = useSelector((state) => state.index.data)
+    const createAction = useSelector((state)=> state.index.actionCreate)
     const dispatch = useDispatch()
     
     let arruserData = []
@@ -24,6 +26,17 @@ export default function CreateModal({display,show,setTicket,ticket,item,handlerM
         progress: 0,
         id: 1
     })
+
+
+    useEffect(()=>{
+        if(createAction === 'statusCreated'){
+            const def = {
+                value: 0,
+                label: ''
+            }
+        }
+    },[])
+
 
     // push SetBase
 

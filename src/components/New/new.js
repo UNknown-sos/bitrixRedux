@@ -1,11 +1,16 @@
 import { useDispatch, useSelector } from 'react-redux'
 import style from './main.css'
-import {ticket_id} from '../../store/index'
+import {isShow, ticket_id} from '../../store/index'
 import { ticketId } from '../../store/index'
+import { createAction } from '@reduxjs/toolkit'
 
-export default function New({ticket,name,description,status,progress,create,id,title,color,commentMenu}) {
+export default function New({ticket,name,description,status,progress,create,id,title,color,commentMenu,handlerCreate}) {
     const dataState = useSelector((state) => state.index.data)
     const dispatch = useDispatch()
+
+    const modalShow = useSelector((state)=>state.index.show)
+    
+
     return (
         <div className='new_cont'>
             <div className='title_box' style={{backgroundColor:color}}>
@@ -14,8 +19,14 @@ export default function New({ticket,name,description,status,progress,create,id,t
             <div className='price_box'>
                 <p>0$</p>
             </div>
-            <div className='add_box'>
-                <p>+ Quick Deal</p>
+            <div className='add_box' onClick={()=>{
+                dispatch(isShow({show:!modalShow}))
+
+                dispatch(createAction({actionCreate:'statusCreated'}))
+
+                dispatch()
+            }}>
+                <p>+</p>
             </div>
             <div className='cards_cont'>
                {dataState.map((item)=>{

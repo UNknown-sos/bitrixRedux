@@ -9,11 +9,6 @@ function App() {
   const navigate = useNavigate();
   const dispatch = useDispatch()
 
-  // if(user.username === userData.username && user.password === userData.password){
-  //   console.log(true)
-  // }else{
-  //   console.log(false)
-  // }
 
   let user = {
     username : '',

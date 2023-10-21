@@ -5,7 +5,8 @@ const initialState = {
   data: [],
   comments: false,
   ticket_id: 0,
-  write:[]
+  write:[],
+  createAction : ''
 }
 
 
@@ -37,10 +38,13 @@ export const indexSlice = createSlice({
     },
     ticketId : (state,action) => {
       state.ticket_id = action.payload.ticket_id
+    },
+    createAction:(state,action) => {
+      state.actionCreate = action.payload.actionCreate
     }
   },
 })
 
-export const { isShow,setData ,create,setComments,writeComment,ticketId,ticket_id} = indexSlice.actions
+export const { isShow,setData ,create,setComments,writeComment,ticketId,ticket_id,createAction} = indexSlice.actions
 
 export default indexSlice.reducer
