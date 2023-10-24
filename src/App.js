@@ -5,6 +5,8 @@ import { useNavigate } from "react-router-dom";
 import { useDispatch } from 'react-redux';
 import { Dispatch } from 'react';
 
+import { userAction } from './store';
+
 function App() {
   const navigate = useNavigate();
   const dispatch = useDispatch()
@@ -18,6 +20,7 @@ function App() {
 function handlerCheck(){
   userData.filter((item)=>{
     if(user.username === item.username && user.password === item.password){
+      dispatch(userAction({write:item.id}))
       navigate("/home");
     }else{
       console.log("sd");

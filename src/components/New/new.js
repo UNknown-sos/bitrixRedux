@@ -1,6 +1,6 @@
 import { useDispatch, useSelector } from 'react-redux'
 import style from './main.css'
-import {isShow, ticket_id} from '../../store/index'
+import {isShow} from '../../store/index'
 import { ticketId } from '../../store/index'
 import { createAction } from '@reduxjs/toolkit'
 
@@ -48,7 +48,7 @@ export default function New({ticket,name,description,status,progress,create,id,t
                     </div>
                     <div className='reactions_bar'>
                         <div className='comment' onClick={() =>{
-                            dispatch(ticketId({ticket_id}))
+                            dispatch(ticketId({ticket_id:item.id}))
                             commentMenu()
                         }}>
                             <p>C</p>
