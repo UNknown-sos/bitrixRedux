@@ -7,7 +7,7 @@ const initialState = {
   ticket_id: 0,
   write:[],
   createAction : '',
-  userId : 0
+  userId : 0,
 }
 
 

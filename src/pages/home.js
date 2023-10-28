@@ -6,16 +6,27 @@ import CreateBtn from "../components/buttons/createbtn";
 import {useState} from "react";
 import CreateModal from "../components/createModal/createmodal";
 import { useDispatch , useSelector} from 'react-redux';
-import { isShow } from '../store/index';
+import { isShow, userId } from '../store/index';
 import { setData } from '../store/index';
 import { setComments } from '../store/index';
 import CommentModal from '../components/commentModal/commentModal';
+import { useEffect } from 'react';
+import { useNavigate } from "react-router-dom";
 
 function Home() {
   const [ticket,setTicket] = useState([])
+  const userId = useSelector((state) => state.index.userId)
   const dispatch = useDispatch()
   const isShowState = useSelector((state) => state.index.show)
   const isCommentState = useSelector((state) => state.index.comments)
+
+  const navigate = useNavigate()
+
+  useEffect(() =>{
+      if(userId === 0){
+          navigate("/")
+      }
+  },[])
 
   const handlerCreate = () =>{
 

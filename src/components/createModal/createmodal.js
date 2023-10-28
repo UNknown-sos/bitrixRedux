@@ -20,10 +20,10 @@ export default function CreateModal({display,show,setTicket,ticket,item,handlerM
     })
 
     const [base,setBase] = useState({
-        name:'',
-        description:'',
+        number:'',
+        price:'',
         status: 0,
-        progress: 0,
+        company: 0,
         id: 1
     })
 
@@ -61,7 +61,7 @@ export default function CreateModal({display,show,setTicket,ticket,item,handlerM
                                 setBase((state) => {
                                 return {
                                     ...state,
-                                    name:e.target.value
+                                    number:e.target.value
                                 }
                             })
                         }}/>
@@ -77,7 +77,7 @@ export default function CreateModal({display,show,setTicket,ticket,item,handlerM
                         setBase((state) =>{
                             return{
                                 ...state,
-                                description:e.target.value
+                                price:e.target.value
                             }
                         })
                     }}textarea/>
@@ -94,7 +94,7 @@ export default function CreateModal({display,show,setTicket,ticket,item,handlerM
                             return{
                                 ...state,
                                 id:dataState[dataState.length-1] ? dataState[dataState.length-1].id+1: 1,
-                                progress:i.label
+                                company:i.label
                             }   
                             })
                         }}

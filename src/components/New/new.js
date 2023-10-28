@@ -4,7 +4,7 @@ import {isShow} from '../../store/index'
 import { ticketId } from '../../store/index'
 import { createAction } from '@reduxjs/toolkit'
 
-export default function New({ticket,name,description,status,progress,create,id,title,color,commentMenu,handlerCreate}) {
+export default function New({ticket,number,price,status,company,create,id,title,color,commentMenu,handlerCreate}) {
     const dataState = useSelector((state) => state.index.data)
     const dispatch = useDispatch()
 
@@ -33,10 +33,10 @@ export default function New({ticket,name,description,status,progress,create,id,t
                 return item.status === id && ( 
                 <div className='card'>
                     <div className='card_name'>
-                        <p>Deal #{item.name}</p>
+                        <p>Deal #{item.number}</p>
                     </div>
                     <div className='card_desc'>
-                        <p>€{item.description}</p>
+                        <p>€{item.price}</p>
                     </div>
                     <div className='add_data'>
                         <p>
@@ -44,7 +44,7 @@ export default function New({ticket,name,description,status,progress,create,id,t
                         </p>
                     </div>
                     <div className='company_name'>
-                        <p>{item.progress}</p>
+                        <p>{item.company}</p>
                     </div>
                     <div className='reactions_bar'>
                         <div className='comment' onClick={() =>{

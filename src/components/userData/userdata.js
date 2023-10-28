@@ -3,46 +3,59 @@ export const userData = [
         id: 1,
         username: 'ASUS',
         password: '123456',
+        img : '/companieLogos/asus.jpg'
     },
     {
         id: 2,
         username: 'Xiaomi',
         password: 'redmi9a',
+        img : '/companieLogos/xiaomi.png'
     },
     {
         id: 3,
         username: 'Samsung',
-        password: 'qwerty123',
+        password: 'mekerku',
+        img : '/companieLogos/samsung.png'
     },
     {
         id: 4,
         username: 'Steam',
-        password: 'gjsdf554',
+        password: 'real',
+        img : '/companieLogos/steam.png'
     },
     {
         id: 5,
         username: 'Space X',
-        password: '127ulullu',
+        password: 'kola',
+        img : '/companieLogos/spaceX.jpg'
     },
     {
         id: 6,
         username: 'Meta',
-        password: 'qwertoo11',
+        password: 'kill',
+        img : '/companieLogos/meta.webp'
+
     },
     {
         id: 7,
         username: 'Microsoft',
-        password: 'ezas11e',
+        password: 'moretto',
+        img : '/companieLogos/microsoft.png'
+
     },
     {
         id: 8,
         username: 'Google Corp.',
-        password: 'partizg13',
+        password: 'yoxan',
+        img : '/companieLogos/google.webp'
+
     },
     {
         id: 9,
-        username: 'Apple Inc.',
-        password: 'qqwe13123',
+        username: 'Apple',
+        password: 'individum',
+        img : '/companieLogos/apple.jpg'
+
     },
 ]
 
